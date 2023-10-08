@@ -74,6 +74,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { readonly [chainId: number]: Token[
     }),
     new Token({
       chainId: ParachainId.MOONBEAM,
+      address: '0xFFfffffF7D2B0B761Af01Ca8e25242976ac0aD7D',
+      decimals: 6,
+      name: 'USD Coin (Xcm)',
+      symbol: 'xcUSDC',
+    }),
+    new Token({
+      chainId: ParachainId.MOONBEAM,
       address: '0xab3f0245b83feb11d15aaffefd7ad465a59817ed',
       decimals: 18,
       name: 'Wrapped Ether (Wormhole)',
