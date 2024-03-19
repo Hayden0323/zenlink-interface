@@ -847,8 +847,8 @@ msgid "Pool Types"
 msgstr "Pool Types"
 
 #: packages/wagmi/systems/Approve/TokenApproveButton.tsx
-msgid "Approve {0}"
-msgstr "Approve {0}"
+#~ msgid "Approve {0}"
+#~ msgstr "Approve {0}"
 
 #: apps/pool/components/Rate.tsx
 #: apps/swap/components/Rate.tsx
@@ -1210,6 +1210,10 @@ msgstr "Clear"
 #: packages/wagmi/components/Wallet/Button.tsx
 #~ msgid "Authorize Wallet"
 #~ msgstr "Authorize Wallet"
+
+#: packages/wagmi/systems/Approve/TokenApproveButton.tsx
+msgid "{0} {1}"
+msgstr "{0} {1}"
 
 #: apps/pool/components/RemoveSection/RemoveSectionStable.tsx
 #: apps/pool/components/RemoveSection/RemoveSectionStandard.tsx

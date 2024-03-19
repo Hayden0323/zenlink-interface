@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { ParachainId, chainsParachainIdToChainId } from '@zenlink-interface/chain'
-import { DOT, Token, WNATIVE, USDT } from '@zenlink-interface/currency'
+import { DOT, Token, USDT, WNATIVE } from '@zenlink-interface/currency'
 import type { Address, PublicClient } from 'viem'
 import { gmxVault } from '../abis'
 import type { PoolCode } from '../entities'
@@ -68,13 +68,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'getMaxPrice',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'getMaxPrice',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -87,13 +87,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'getMinPrice',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'getMinPrice',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -106,13 +106,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'poolAmounts',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'poolAmounts',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -125,13 +125,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'reservedAmounts',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'reservedAmounts',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -144,13 +144,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'usdgAmounts',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'usdgAmounts',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -163,13 +163,13 @@ export class BeamexProvider extends LiquidityProvider {
         allowFailure: true,
         contracts: tokens.map(
           token =>
-          ({
-            args: [token.address as Address],
-            address: this.vault[this.chainId] as Address,
-            chainId: chainsParachainIdToChainId[this.chainId],
-            abi: gmxVault,
-            functionName: 'maxUsdgAmounts',
-          } as const),
+            ({
+              args: [token.address as Address],
+              address: this.vault[this.chainId] as Address,
+              chainId: chainsParachainIdToChainId[this.chainId],
+              abi: gmxVault,
+              functionName: 'maxUsdgAmounts',
+            } as const),
         ),
       })
       .catch((e) => {
@@ -177,14 +177,14 @@ export class BeamexProvider extends LiquidityProvider {
         return undefined
       })
 
-      return await Promise.all([
-        tokenMaxPriceCalls,
-        tokenMinPriceCalls,
-        poolAmountsCalls,
-        reservedAmountsCalls,
-        usdgAmountsCalls,
-        maxUsdgAmountsCalls,
-      ])
+    return await Promise.all([
+      tokenMaxPriceCalls,
+      tokenMinPriceCalls,
+      poolAmountsCalls,
+      reservedAmountsCalls,
+      usdgAmountsCalls,
+      maxUsdgAmountsCalls,
+    ])
   }
 
   public async getPools(tokens: Token[]) {

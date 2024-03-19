@@ -819,8 +819,8 @@ msgid "Pool Types"
 msgstr "풀 유형"
 
 #: packages/wagmi/systems/Approve/TokenApproveButton.tsx
-msgid "Approve {0}"
-msgstr "승인 {0}"
+#~ msgid "Approve {0}"
+#~ msgstr "승인 {0}"
 
 #: apps/pool/components/Rate.tsx
 #: apps/swap/components/Rate.tsx
@@ -1170,6 +1170,10 @@ msgstr "최고 보상 APR:"
 #: packages/wagmi/components/NotificationCentre/NotificationCentre.tsx
 msgid "Clear"
 msgstr "지우기"
+
+#: packages/wagmi/systems/Approve/TokenApproveButton.tsx
+msgid "{0} {1}"
+msgstr ""
 
 #: apps/pool/components/RemoveSection/RemoveSectionStable.tsx
 #: apps/pool/components/RemoveSection/RemoveSectionStandard.tsx
