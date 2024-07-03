@@ -93,21 +93,6 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { readonly [chainId: number]: Token[
       name: 'Wrapped BTC (Wormhole)',
       symbol: 'WBTC.wh',
     }),
-    new Token({
-      chainId: ParachainId.MOONBEAM,
-      address: '0xc806B0600cbAfA0B197562a9F7e3B9856866E9bF',
-      decimals: 18,
-      name: 'Deuterium',
-      symbol: 'd2O',
-    }),
-    new Token({
-      chainId: ParachainId.MOONBEAM,
-      address: '0xbc7E02c4178a7dF7d3E564323a5c359dc96C4db4',
-      decimals: 10,
-      name: 'Stella stDOT',
-      symbol: 'stDOT',
-    })
-
   ],
   [ParachainId.SCROLL_ALPHA]: [
     WNATIVE[ParachainId.SCROLL_ALPHA],
