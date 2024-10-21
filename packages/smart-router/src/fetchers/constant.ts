@@ -62,7 +62,7 @@ export const LIQUIDITY_PROVIDERS: LiquidityProviders[] = [
   LiquidityProviders.TraderJoeV2,
   LiquidityProviders.ZyberswapV3,
   LiquidityProviders.Curve,
-  LiquidityProviders.StellaStable,
+  // LiquidityProviders.StellaStable,
   LiquidityProviders.StellaSwapV2,
   LiquidityProviders.StellaSwapV3,
   LiquidityProviders.BeamswapV2,
