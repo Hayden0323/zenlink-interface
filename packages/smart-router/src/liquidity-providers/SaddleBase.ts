@@ -134,7 +134,9 @@ export abstract class SaddleBaseProvider extends LiquidityProvider {
     poolAddresses.forEach((addr, i) => {
       const lpToken = lpAddresses[i]
       const tokens = tokensAddresses[i]
-      const balances = tokenBalances[i].map(b => b.result ? BigNumber.from(b.result).toString() : undefined)
+      const balances = tokenBalances[i].every(b => b.result !== undefined)
+        ? tokenBalances[i].map(b => BigNumber.from(b.result).toString())
+        : undefined
       const storage = swapStorage[i]?.result
       const a = A[i].result ? BigNumber.from(A[i].result) : undefined
       const virtualPrice = virtualPrices[i].result ? BigNumber.from(virtualPrices[i].result) : undefined
@@ -143,7 +145,7 @@ export abstract class SaddleBaseProvider extends LiquidityProvider {
       if (
         tokens
         && lpToken
-        && balances.every(b => b !== undefined)
+        && balances
         && storage
         && a
         && virtualPrice
