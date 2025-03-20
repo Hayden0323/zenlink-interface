@@ -141,13 +141,6 @@ export const USDC = {
     symbol: 'USDC.wh',
     name: 'USD Coin (Wormhole)',
   }),
-  [ParachainId.BASE]: new Token({
-    chainId: ParachainId.BASE,
-    address: '0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA',
-    decimals: 6,
-    symbol: 'USDbc',
-    name: 'USD Base Coin',
-  }),
 } as { [k: string]: Token }
 
 export const USDT = {
