@@ -16,6 +16,10 @@ export const WETH9_ADDRESS: Record<number | string, string> = {
   [ParachainId.BASE]: '0x4200000000000000000000000000000000000006',
 }
 
+export const cbBTC_ADDRESS: Record<number | string, string> = {
+  [ParachainId.BASE]: '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
+}
+
 export const WBTC_ADDRESS: Record<number | string, string> = {
   [ParachainId.ARBITRUM_ONE]: '0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f',
 }

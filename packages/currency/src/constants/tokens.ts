@@ -16,6 +16,7 @@ import {
   WNATIVE_ADDRESS,
   XCAUSD_ADDRESS,
   ZLK_ADDRESS,
+  cbBTC_ADDRESS,
 } from './tokenAddresses'
 
 export const WNATIVE: Record<keyof typeof WNATIVE_ADDRESS, Token> = {
@@ -94,6 +95,15 @@ export const WBTC = addressMapToTokenMap(
   },
   WBTC_ADDRESS,
 ) as Record<keyof typeof WBTC_ADDRESS, Token>
+
+export const cbBTC: Record<keyof typeof cbBTC_ADDRESS, Token> = addressMapToTokenMap(
+  {
+    decimals: 8,
+    symbol: 'cbBTC',
+    name: 'Coinbase Wrapped BTC',
+  },
+  cbBTC_ADDRESS,
+)
 
 export const UNI = addressMapToTokenMap(
   {
