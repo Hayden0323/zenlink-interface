@@ -100,14 +100,14 @@ export class AerodromeCLProvider extends LiquidityProvider {
       if (poolState?.[i].status !== 'success' || !poolState?.[i].result)
         return
 
-      const address = poolState[i].result.pool
-      const balance0 = poolState[i].result.balance0
-      const balance1 = poolState[i].result.balance1
-      const tick = poolState[i].result.slot0.tick
-      const fee = poolState[i].result.fee
-      const liquidity = poolState[i].result.liquidity
-      const sqrtPriceX96 = poolState[i].result.slot0.sqrtPriceX96
-      const tickBitmap = ticksMap.get(address)
+      const address = poolState[i].result?.pool
+      const balance0 = poolState[i].result?.balance0
+      const balance1 = poolState[i].result?.balance1
+      const tick = poolState[i].result?.slot0.tick
+      const fee = poolState[i].result?.fee
+      const liquidity = poolState[i].result?.liquidity
+      const sqrtPriceX96 = poolState[i].result?.slot0.sqrtPriceX96
+      const tickBitmap = ticksMap.get(address || '')
 
       if (
         !address
